@@ -13,7 +13,7 @@ const NavBar = () => {
     <>
       <div className="mt-10 w-full divide-y-2 divide-game-border  pb-2 text-xl text-white font-bold ml-5">
         
-        <div className="flex justify-evenly">
+        <div className="flex justify-evenly w-[500px]">
           <div className={`${activeTab === "HOME" && 'border-b border-b-white'} cursor-pointer pb-2 relative`} onClick={()=>{handleTab("HOME")}}>
             <p>HOME</p>
           </div>

@@ -4,6 +4,7 @@ import celDog from '../assets/BF4_Celebration_Dog_Tag.png'
 import premDog from '../assets/premium dog tag.png'
 import solInfo from '../assets/soldier__level.svg'
 import Data from './Data'
+import MachineData from './MachineData'
 const MidSection = () => {
   return (
     <>
@@ -25,10 +26,50 @@ const MidSection = () => {
                 </div>
                 </div>
             </div>
-            <div>
+            <div className='mt-5 flex'>
+                <div className='divide-y-2 divide-game-border'>
+                    <div></div>
                 <Data/>
-                {/* <div>left</div> */}
-                {/* <div>right</div> */}
+                <Data/>
+                <Data/>
+                <Data/>
+                <div></div>
+                </div>
+                
+                <div className=''>
+                    <div className='flex justify-between ml-5 w-56'>
+                        <div>
+                            <p className='font-[500] text-[20px]'>hare krishna</p>
+                            <p className='font-[700] text-[38px]'>haribol</p>
+                        </div>
+                        <div className='ml-20'>
+                            <p className='font-[500] text-[20px]'>hare krishna</p>
+                            <p className='font-[700] text-[38px]'>haribol</p>
+                        </div>
+                        <div className='ml-20'>
+                            <p className='font-[500] text-[20px]'>hare krishna</p>
+                            <p className='font-[700] text-[38px]'>haribol</p>
+                        </div>
+                    </div>
+                    <div className='w-xl flex flex-wrap'>
+                        <div>
+                        <MachineData/>
+
+                        </div>
+                        <div>
+
+                        <MachineData/>
+                        </div>
+                        <div>
+
+                        <MachineData/>
+                        </div>
+                        <div>
+
+                        <MachineData/>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

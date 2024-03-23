@@ -20,3 +20,9 @@ body::before {
     background-color: rgba(255, 255, 255, 0); /* Adjust opacity here */
     z-index: -1; /* Ensure the overlay is behind other content */
 }
+progress::-webkit-progress-bar {
+    background-color: rgba(16, 16, 16, 1);
+ }
+ progress::-webkit-progress-value{
+    background-color: rgba(238, 147, 14, 1);
+ }

@@ -1,28 +1,22 @@
 import React from "react";
 
 const Data = () => {
-  const value = 50;
-  const max = 100;
+  const value = 134;
+  const max = 185;
   const percentage = value / max;
   return (
     <>
       <div>
-        <div className="flex">
-          <p>Hare krishna</p>
-          <div>
-            <span>{`${value}/${max}`}</span>
+        <div className="flex justify-between items-center w-full p-2">
+          <p className="tracking-[.15em] font-bold text-sm">Hare krishna</p>
+          <div className="ml-20 text-sm">
+            <span className="leading-tight block text-end text-sm">{`${value}/${max}`}</span>
             <progress
               value={value}
               max={max}
-              style={{ width: "100%" }}
+              className="h-1.5 w-24"
             />
-            <div
-              style={{
-                width: `${percentage}%`,
-                backgroundColor: "blue",
-                height: "10px",
-              }}
-            />
+            
           </div>
         </div>
       </div>
