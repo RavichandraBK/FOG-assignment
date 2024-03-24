@@ -4,8 +4,11 @@ import celDog from '../assets/BF4_Celebration_Dog_Tag.png'
 import premDog from '../assets/premium dog tag.png'
 import solInfo from '../assets/soldier__level.svg'
 import Data from './Data'
+import myContext from '../Contexts/MyContext';
+import { useContext } from 'react';
 import MachineData from './MachineData'
 const MidSection = () => {
+    const {gameData} = useContext(myContext);
   return (
     <>
     <div className='flex'>
@@ -29,45 +32,37 @@ const MidSection = () => {
             <div className='mt-5 flex'>
                 <div className='divide-y-2 divide-game-border'>
                     <div></div>
-                <Data/>
-                <Data/>
-                <Data/>
-                <Data/>
+                    {gameData.specifications&&gameData.specifications.map((item,index)=>(
+                <Data key={index} barName={item.name} value={item.score} max={item.total}/>
+                    ))}
+                <Data barName={gameData.extra}/>
                 <div></div>
                 </div>
                 
                 <div className=''>
                     <div className='flex justify-between ml-5 w-56'>
                         <div>
-                            <p className='font-[500] text-[20px]'>hare krishna</p>
-                            <p className='font-[700] text-[38px]'>haribol</p>
+                            <p className='font-[200] text-[15px]'>{gameData&&gameData.wins.name}</p>
+                            <p className='font-[700] text-[30px]'>{gameData&&gameData.wins.value}</p>
                         </div>
                         <div className='ml-20'>
-                            <p className='font-[500] text-[20px]'>hare krishna</p>
-                            <p className='font-[700] text-[38px]'>haribol</p>
+                            <p className='font-[200] text-[15px]'>{gameData&&gameData.score_min.name}</p>
+                            <p className='font-[700] text-[30px]'>{gameData&&gameData.score_min.value}</p>
                         </div>
                         <div className='ml-20'>
-                            <p className='font-[500] text-[20px]'>hare krishna</p>
-                            <p className='font-[700] text-[38px]'>haribol</p>
+                            <p className='font-[200] text-[15px]'>{gameData&&gameData.kills_min.name}</p>
+                            <p className='font-[700] text-[30px]'>{gameData&&gameData.kills_min.value}</p>
                         </div>
                     </div>
-                    <div className='w-xl flex flex-wrap'>
-                        <div>
-                        <MachineData/>
+                    <div className='w-[600px] flex flex-wrap'>
+                        {gameData&&gameData.machine.map((item,index)=>(
+
+                        <div key={index}>
+                        <MachineData img={item.img} weapontype={item.type} weaponName={item.name} weaponCap={item.value}/>
 
                         </div>
-                        <div>
-
-                        <MachineData/>
-                        </div>
-                        <div>
-
-                        <MachineData/>
-                        </div>
-                        <div>
-
-                        <MachineData/>
-                        </div>
+                        ))}
+                        
                     </div>
                 </div>
             </div>
