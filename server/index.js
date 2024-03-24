@@ -7,7 +7,7 @@ const path = require('path');
 app.use(cors());
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
-const serverBaseUrl = `http://localhost:${process.env.PORT}`;
+const serverBaseUrl = `https://fog-assignment.onrender.com`;
 
 const data = {
   "rank": {
