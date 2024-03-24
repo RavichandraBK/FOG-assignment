@@ -11,21 +11,21 @@ const MidSection = () => {
     const {gameData} = useContext(myContext);
   return (
     <>
-    <div className='flex'>
+    <div className='flex mt-20'>
         <div>
             <img src={soldier} alt="" width={250} height={250}/>
-            <img src={celDog} alt=""  className='absolute top-[390px] left-[80px]' width={190} height={190}/>
-            <img src={premDog} alt=""  className='absolute top-[290px] left-[150px]' width={190} height={190}/>
+            <img src={celDog} alt=""  className='absolute top-[450px] left-[80px]' width={190} height={190}/>
+            <img src={premDog} alt=""  className='absolute top-[350px] left-[180px]' width={190} height={190}/>
         </div>
         <div>
             <div className='flex'>
                 <img src={solInfo} alt="" width={100} height={100} className='align-bottom mt-2'/>
                 <div className='mt-5 ml-5'>
-                <p>hare krishna</p>
+                <p>cookie</p>
                 <div className='flex mt-3'>
 
-                <div className='border h-[28px] w-[45px] border-white text-center  text-[10px]'><p>haribol</p></div>
-                <p className='text-[16px] font-light  ml-5'>hari hari</p>
+                <div className='border h-[28px] w-[45px] border-white text-center  text-[10px]'><p>63</p></div>
+                <p className='text-[16px] font-bold  ml-5'>{gameData&&gameData.rank.obtained}/{gameData&&gameData.rank.total}<span className='font-light'>-- Estimated rank up in 1h</span></p>
                 </div>
                 </div>
             </div>
