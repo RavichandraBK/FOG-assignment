@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import navEdge from '../assets/nav-edgeImg.png'
 import MidSection from "./MidSection";
 
+import myContext from "../Contexts/MyContext";
 const NavBar = () => {
+  const {multiplayer,setMultiplayer} =useContext(myContext)
     const [activeTab, setActiveTab] = useState(null);
 
     const handleTab = (tabName)=>{
+        if(tabName==='MULTIPLAYER')
+        setMultiplayer(true);
         setActiveTab(tabName===activeTab?null:tabName)
     }
   return (

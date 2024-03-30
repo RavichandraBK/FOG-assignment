@@ -13,8 +13,9 @@ function App() {
     }
     handleAPI();
   },[])
+  const [multiplayer,setMultiplayer] = useState(false);
   return (
-    <myContext.Provider value={{gameData,setGameData}}>
+    <myContext.Provider value={{gameData,setGameData,multiplayer,setMultiplayer}}>
     <div >
       <Home/>
     </div>
